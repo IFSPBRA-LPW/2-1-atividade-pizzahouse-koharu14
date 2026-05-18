@@ -1,13 +1,44 @@
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif; /*muda a fonte de todo o index.html*/
+    /*há três opções pois, caso não tenha a arial, será usada a helvetica e, caso não tenha nenhuma das duas, será usada a sans-serif*/
+    
+    /*só da para mudar com elementos de comportamento em bloco*/
+    /*zerar margens e espaços para deixar do jeito que quero*/
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;/*a cor do fundo agora é a cor preta, porém esse passo não é tão necessário, pois a imagem já irá cobrir,
+    mas, caso a imagem não carregue vai aparecer o fundo preto e esse comando se tornará útil*/
+    color: #FFFF; /*white (muda a cor das letras do <body>)*/
+    background: url("../images/pizza.jpg"); /*inclui a imagem no fundo*/
+    background-size: cover; /*sem esse, a imagem aparece só uma parte dela, fica cortada*/
+}
+
+#navbar{
+    background: rgba(0, 0, 0, 0.5); /*0.5 é o grau de transparência*/
+
 }
 
 h1{
     font-size: 70px;
 }
 
-.logo{
+.logo{ /*precisa do ponto, pois ele que indica ao CSS que é uma nova classe*/
     font-size: 24px;
     font-weight: bold;
+}
+
+li{
+    display: inline-block; /*os elementos da lista vão ficar na mesma linha, não vai ter uma linha para cada*/
+    /*inline-block, pois precisa de um espaço entre os itens*/
+    /*estamos mudando as <li>, não a lista, ou seja, a <ul> continua em formato de bloco*/
+    margin:  0 16px; /* margin: 0 16 px 0 16px*/
+}
+
+.link-menu{ 
+    color: #FFFF; /*color: white*/
+    text-decoration: none;
 }
 
