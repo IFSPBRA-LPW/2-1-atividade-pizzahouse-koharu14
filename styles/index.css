@@ -8,26 +8,32 @@
     padding: 0;
 }
 
+/*seletor de tag*/
 body{
     background-color: black;/*a cor do fundo agora é a cor preta, porém esse passo não é tão necessário, pois a imagem já irá cobrir,
     mas, caso a imagem não carregue vai aparecer o fundo preto e esse comando se tornará útil*/
     color: #FFFF; /*white (muda a cor das letras do <body>)*/
     background: url("../images/pizza.jpg"); /*inclui a imagem no fundo*/
     background-size: cover; /*sem esse, a imagem aparece só uma parte dela, fica cortada*/
+    height: 100vh; /*vh=view height --> disse qu ela vai usar toda a altura de visualização*/
+    /*esse comando vai dizer para usar toda visão*/
 }
 
-#navbar{
+#navbar{/*ID*/
     background: rgba(0, 0, 0, 0.5); /*0.5 é o grau de transparência*/
+    padding: 16px; /*margin não, pois queremos mexer no espaçamento nterno, não externo*/
 
 }
 
 h1{
     font-size: 70px;
+    padding-top: 200px;
 }
 
 .logo{ /*precisa do ponto, pois ele que indica ao CSS que é uma nova classe*/
     font-size: 24px;
     font-weight: bold;
+    display: inline-block;
 }
 
 li{
@@ -37,8 +43,38 @@ li{
     margin:  0 16px; /* margin: 0 16 px 0 16px*/
 }
 
+div{
+    display: inline-block;
+}
+nav{
+    display: inline-block;
+    width: 90%;
+    text-align: right;
+}/*colocamos o inline-block para alinhar os elementos*/
+/*por que não o header? queremos mudar os elementos específicos, os filhos, não o pai, dá mais flexibilidade*/
+
 .link-menu{ 
     color: #FFFF; /*color: white*/
     text-decoration: none;
 }
 
+.link-menu:hover{ /*hover=quando passar o mouse por cima*/
+    border-bottom: 5px blueviolet solid;
+}
+
+footer{
+    background: rgba(0, 0, 0, 0.5);
+    padding: 16px;
+    text-align: center;
+    position: absolute; /*a partir do fim da página vai deslocar:*/
+    bottom: 0;
+    width: 100%;
+}
+
+.button{
+    color: white;
+}
+
+button{
+    color:rgba(204, 115, 14, 0)
+}
