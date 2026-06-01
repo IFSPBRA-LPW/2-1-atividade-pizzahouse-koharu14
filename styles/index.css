@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap'); /*sempre primeira linha*/
+
 *{
     font-family: Arial, Helvetica, sans-serif; /*muda a fonte de todo o index.html*/
     /*há três opções pois, caso não tenha a arial, será usada a helvetica e, caso não tenha nenhuma das duas, será usada a sans-serif*/
@@ -26,8 +28,9 @@ body{
 }
 
 h1{
+    font-family: "Playfair Display", serif;
     font-size: 70px;
-    padding-top: 200px;
+    line-height: 1.1; /*tamanho da linha = tamanho da fonte + 10%*/
 }
 
 .logo{ /*precisa do ponto, pois ele que indica ao CSS que é uma nova classe*/
@@ -62,6 +65,35 @@ nav{
     border-bottom: 5px blueviolet solid;
 }
 
+.conteudo{
+    padding-top: 150px; /*margem não, porque, se não, o bloco se afasta todo e fica desmanchado*/
+    padding-left: 50px;
+    /*atalho: padding: 150px 50px 50px 50px*/
+    width: 600px;
+
+}
+
+.conteudo p{ /*todas as tags <p> que estão dentro do elemento que está sendo estilizado pela minha classe conteudo*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.button{
+    background-color: #FFEC00;
+    padding: 12px;
+    width: 150px;
+}
+
+.button a{
+    /*display: block; --> o link é inline*/ /*mas o botão é bloco já, então não precisa converter em bloco*/
+    /*caso não fosse utilizado o <button> no HTML, precisaria mexer no text-align também*/
+    text-decoration: none;
+    color: black;
+    font-weight: 700; /*de 100 a 900*/
+    text-transform: uppercase; /*mais fácil fazer no HTML, mas, às vezes, */
+}
+
+
 footer{
     background: rgba(0, 0, 0, 0.5);
     padding: 16px;
@@ -69,12 +101,4 @@ footer{
     position: absolute; /*a partir do fim da página vai deslocar:*/
     bottom: 0;
     width: 100%;
-}
-
-.button{
-    color: white;
-}
-
-button{
-    color:rgba(204, 115, 14, 0)
 }
